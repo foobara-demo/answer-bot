@@ -1,0 +1,5 @@
+module FoobaraDemo
+  module AnswerBot
+    VERSION = "0.0.1".freeze
+  end
+end

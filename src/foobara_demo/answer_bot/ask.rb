@@ -4,7 +4,7 @@ module FoobaraDemo
       description "Ask a question and receive the knowledge you seek."
 
       inputs do
-        question :string, :required
+        question :string, :required, description: "whatever you want to know!"
       end
 
       result :string

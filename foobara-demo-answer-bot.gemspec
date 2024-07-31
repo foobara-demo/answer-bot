@@ -15,6 +15,8 @@ Gem::Specification.new do |spec|
   spec.metadata["source_code_uri"] = spec.homepage
   spec.metadata["changelog_uri"] = "#{spec.homepage}/blob/main/CHANGELOG.md"
 
+  spec.executables += ["answer-bot"]
+
   spec.files = Dir[
     "lib/**/*",
     "src/**/*",

@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/foobara/sh-cli-connector.git
+  revision: 32cd7151ee3f46e3ea2ec6cc87ab5000cd372300
+  specs:
+    foobara-sh-cli-connector (0.0.1)
+      foobara
+
 PATH
   remote: .
   specs:
@@ -84,8 +91,6 @@ GEM
     foobara-rubocop-rules (0.0.3)
       rubocop
       rubocop-rspec
-    foobara-sh-cli-connector (0.0.1)
-      foobara
     foobara-sh-cli-connector-generator (0.0.2)
       foobara
       foobara-files-generator
@@ -208,6 +213,7 @@ DEPENDENCIES
   foobara-demo-answer-bot!
   foobara-dotenv-loader
   foobara-rubocop-rules
+  foobara-sh-cli-connector!
   foobara-spec-helpers
   guard-rspec
   pry

@@ -1,34 +1,22 @@
 module FoobaraDemo
   module AnswerBot
     class Ask < Foobara::Command
-      # class SomeError < RuntimeError
-      #   class << self
-      #     def context_type_declaration
-      #       { foo: :string }
-      #     end
-      #   end
-      # end
-
-      # possible_error SomeError
+      description "Ask a question and receive the knowledge you seek."
 
       inputs do
-        foo :string, default: "bar"
+        question :string, :required
       end
 
       result :string
 
-      # depends_on SomeOtherCommand
-
       def execute
-        do_something
+        build_answer
       end
 
-      # def validate
-      #   add_runtime_error SomeError.new(message: "kaboom", context: {foo: :bar})
-      # end
+      attr_accessor :answer
 
-      def do_something
-        foo
+      def build_answer
+        self.answer = "I don't know!"
       end
     end
   end

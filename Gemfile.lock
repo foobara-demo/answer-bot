@@ -17,10 +17,10 @@ GEM
       bigdecimal
       rexml
     diff-lcs (1.5.1)
-    docile (1.4.0)
+    docile (1.4.1)
     dotenv (3.1.2)
     ffi (1.17.0-x86_64-linux-gnu)
-    foob (0.0.5)
+    foob (0.0.6)
       foobara
       foobara-autocrud-generator
       foobara-command-generator
@@ -61,7 +61,7 @@ GEM
     foobara-empty-typescript-react-project-generator (0.0.3)
       foobara
       foobara-files-generator
-    foobara-files-generator (0.0.1)
+    foobara-files-generator (0.0.3)
       foobara
     foobara-organization-generator (0.0.1)
       foobara
@@ -86,7 +86,7 @@ GEM
       rubocop-rspec
     foobara-sh-cli-connector (0.0.1)
       foobara
-    foobara-sh-cli-connector-generator (0.0.1)
+    foobara-sh-cli-connector-generator (0.0.2)
       foobara
       foobara-files-generator
     foobara-spec-helpers (0.0.3)
@@ -139,15 +139,15 @@ GEM
     pry-byebug (3.10.1)
       byebug (~> 11.0)
       pry (>= 0.13, < 0.15)
-    public_suffix (6.0.0)
-    racc (1.8.0)
+    public_suffix (6.0.1)
+    racc (1.8.1)
     rainbow (3.1.1)
     rake (13.2.1)
     rb-fsevent (0.11.2)
     rb-inotify (0.11.1)
       ffi (~> 1.0)
     regexp_parser (2.9.2)
-    rexml (3.3.1)
+    rexml (3.3.2)
       strscan
     rspec (3.13.0)
       rspec-core (~> 3.13.0)

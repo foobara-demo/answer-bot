@@ -6,11 +6,11 @@ RSpec.describe FoobaraDemo::AnswerBot::Ask do
   let(:errors_hash) { outcome.errors_hash }
 
   let(:inputs) do
-    { foo: "bar" }
+    { question: "wtf?" }
   end
 
   it "is successful" do
     expect(outcome).to be_success
-    expect(result).to eq("bar")
+    expect(result).to eq("I don't know!")
   end
 end

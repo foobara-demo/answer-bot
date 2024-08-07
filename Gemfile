@@ -4,7 +4,10 @@ ruby File.read("#{__dir__}/.ruby-version")
 gemspec
 
 gem "foobara-dotenv-loader"
+gem "foobara-rack-connector", github: "foobara/rack-connector"
 gem "foobara-sh-cli-connector", github: "foobara/sh-cli-connector"
+gem "rackup"
+gem "rerun"
 
 gem "rake"
 

@@ -1,0 +1,103 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.openai.com/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"gpt-4o","messages":[{"role":"system","content":"You are a
+        scientific-minded assistant who answers concisely and precisely."},{"role":"user","content":"What
+        is the pH of honey?"}]}'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer <SCRUBBED_OPENAI_API_KEY>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.openai.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 12 Aug 2024 22:17:52 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Openai-Organization:
+      - user-mocyfzfqtusxbnhm0zzkagsd
+      Openai-Processing-Ms:
+      - '1880'
+      Openai-Version:
+      - '2020-10-01'
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      X-Ratelimit-Limit-Requests:
+      - '500'
+      X-Ratelimit-Limit-Tokens:
+      - '30000'
+      X-Ratelimit-Remaining-Requests:
+      - '499'
+      X-Ratelimit-Remaining-Tokens:
+      - '29957'
+      X-Ratelimit-Reset-Requests:
+      - 120ms
+      X-Ratelimit-Reset-Tokens:
+      - 86ms
+      X-Request-Id:
+      - req_e6bfdaa6f05ff1038682294f23f5208d
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=2ySi6cATx1VnH6qjyL.F4pnv7Q2TwEc0BlO3gVDVNTg-1723501072-1.0.1.1-e8oNviwFbhSEL5.sIBSoxUfF82_MdWkwwi7yjbRjnHySwpzC0dwpk1yanRO9k0WyTR.YlwKpbPDat1.OueetPQ;
+        path=/; expires=Mon, 12-Aug-24 22:47:52 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=6CNfhk_UtLEWTeC6kGcHsskc8lmokJzVuChHmZHsxhc-1723501072345-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 8b23d678ebdd24f3-SJC
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+          "id": "chatcmpl-9vXeJFmpkJE2m61g6H82IeKUYQevF",
+          "object": "chat.completion",
+          "created": 1723501071,
+          "model": "gpt-4o-2024-05-13",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "Honey typically has a pH range of about 3.4 to 6.1, with an average pH around 3.9. This acidity helps inhibit bacterial growth, contributing to its preservative qualities.",
+                "refusal": null
+              },
+              "logprobs": null,
+              "finish_reason": "stop"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 33,
+            "completion_tokens": 44,
+            "total_tokens": 77
+          },
+          "system_fingerprint": "fp_3aa7262c27"
+        }
+  recorded_at: Mon, 12 Aug 2024 22:17:52 GMT
+recorded_with: VCR 6.2.0

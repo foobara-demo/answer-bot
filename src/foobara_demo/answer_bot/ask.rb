@@ -9,14 +9,36 @@ module FoobaraDemo
 
       result :string
 
+      depends_on OpenAiApi::CreateChatCompletion
+
       def execute
+        run_ai_service
         build_answer
+
+        answer
       end
 
-      attr_accessor :answer
+      attr_accessor :response, :answer
+
+      def run_ai_service
+        inputs = {
+          messages: [
+            {
+              role: "system",
+              content: "You are a scientific-minded assistant who answers concisely and precisely."
+            },
+            {
+              role: "user",
+              content: question
+            }
+          ]
+        }
+
+        self.response = run_subcommand!(OpenAiApi::CreateChatCompletion, inputs)
+      end
 
       def build_answer
-        self.answer = "I don't know!"
+        self.answer = response.choices.first.message.content
       end
     end
   end

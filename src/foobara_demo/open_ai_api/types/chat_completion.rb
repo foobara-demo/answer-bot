@@ -1,3 +1,5 @@
+require_relative "chat_completion/choice"
+
 module FoobaraDemo
   module OpenAiApi
     class ChatCompletion < Foobara::Model

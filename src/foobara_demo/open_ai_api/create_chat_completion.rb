@@ -1,3 +1,7 @@
+require "net/http"
+require_relative "types/message"
+require_relative "types/chat_completion"
+
 module FoobaraDemo
   module OpenAiApi
     class CreateChatCompletion < Foobara::Command

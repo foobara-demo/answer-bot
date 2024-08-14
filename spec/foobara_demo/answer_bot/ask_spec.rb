@@ -6,11 +6,11 @@ RSpec.describe FoobaraDemo::AnswerBot::Ask do
   let(:errors_hash) { outcome.errors_hash }
 
   let(:inputs) do
-    { question: "wtf?" }
+    { question: "what is the pH of honey?" }
   end
 
-  it "is successful" do
+  it "is successful", vcr: { record: :once } do
     expect(outcome).to be_success
-    expect(result).to eq("I don't know!")
+    expect(result).to match(/honey/i)
   end
 end

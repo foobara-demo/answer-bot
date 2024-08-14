@@ -5,24 +5,10 @@ module FoobaraDemo
 
       inputs do
         model :string, one_of: %w[gpt-4o gpt-4], default: "gpt-4o"
-        messages :array do
-          role :string, :required, one_of: %w[system user assistant]
-          content :string, :required
-        end
+        messages [Message]
       end
 
-      result do
-        choices :array do
-          message do
-            role :string, :required, one_of: %w[system user assistant]
-            content :string, :required
-            refusal :duck
-          end
-          index :duck
-          logprobs :duck
-          finish_reason :duck
-        end
-      end
+      result ChatCompletion
 
       def execute
         build_request_headers

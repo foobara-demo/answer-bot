@@ -26,6 +26,6 @@ RSpec.describe FoobaraDemo::OpenAiApi::CreateChatCompletion do
 
   it "is successful", vcr: { record: :once } do
     expect(outcome).to be_success
-    expect(result[:choices][0][:message][:content]).to match(/honey/i)
+    expect(result.choices[0].message.content).to match(/honey/i)
   end
 end

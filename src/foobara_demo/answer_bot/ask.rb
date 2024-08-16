@@ -21,20 +21,7 @@ module FoobaraDemo
       attr_accessor :response, :answer
 
       def run_ai_service
-        inputs = {
-          messages: [
-            {
-              role: "system",
-              content: "You are a scientific-minded assistant who answers concisely and precisely."
-            },
-            {
-              role: "user",
-              content: question
-            }
-          ]
-        }
-
-        self.response = run_subcommand!(OpenAiApi::CreateChatCompletion, inputs)
+        self.response = run_mapped_subcommand!(OpenAiApi::CreateChatCompletion, question)
       end
 
       def build_answer

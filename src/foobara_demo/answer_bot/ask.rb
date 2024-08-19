@@ -25,7 +25,7 @@ module FoobaraDemo
       end
 
       def build_answer
-        self.answer = response.choices.first.message.content
+        self.answer = domain_map(response)
       end
     end
   end

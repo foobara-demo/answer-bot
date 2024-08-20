@@ -5,6 +5,7 @@ gemspec
 
 gem "foobara-dotenv-loader"
 gem "foobara-rack-connector", github: "foobara/rack-connector"
+gem "foobara-remote-imports", github: "foobara/remote-imports"
 gem "foobara-sh-cli-connector", github: "foobara/sh-cli-connector"
 gem "rackup"
 gem "rerun"

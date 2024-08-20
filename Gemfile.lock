@@ -8,6 +8,12 @@ GIT
       rack
 
 GIT
+  remote: https://github.com/foobara/remote-imports.git
+  revision: c58252e61219af8af670e30a47f1b3b6c223d5e6
+  specs:
+    foobara-remote-imports (0.0.1)
+
+GIT
   remote: https://github.com/foobara/sh-cli-connector.git
   revision: 32cd7151ee3f46e3ea2ec6cc87ab5000cd372300
   specs:
@@ -229,6 +235,7 @@ DEPENDENCIES
   foobara-demo-answer-bot!
   foobara-dotenv-loader
   foobara-rack-connector!
+  foobara-remote-imports!
   foobara-rubocop-rules
   foobara-sh-cli-connector!
   foobara-spec-helpers

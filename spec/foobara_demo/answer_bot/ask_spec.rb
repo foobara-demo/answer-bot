@@ -6,11 +6,24 @@ RSpec.describe FoobaraDemo::AnswerBot::Ask do
   let(:errors_hash) { outcome.errors_hash }
 
   let(:inputs) do
-    { question: "what is the pH of honey?" }
+    {
+      question: "what is the pH of honey?",
+      service:
+    }
   end
+  let(:service) { "open-ai" }
 
   it "is successful", vcr: { record: :once } do
     expect(outcome).to be_success
     expect(result).to match(/honey/i)
+  end
+
+  context "when using anthropic" do
+    let(:service) { "anthropic" }
+
+    it "is successful", vcr: { record: :once } do
+      expect(outcome).to be_success
+      expect(result).to match(/honey/i)
+    end
   end
 end

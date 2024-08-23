@@ -7,6 +7,6 @@ default_serializers = [
 
 rack_connector = Foobara::CommandConnectors::Http::Rack.new(default_serializers:)
 
-rack_connector.connect(FoobaraDemo)
+rack_connector.connect(FoobaraDemo::AnswerBot)
 
 RACK_CONNECTOR = rack_connector

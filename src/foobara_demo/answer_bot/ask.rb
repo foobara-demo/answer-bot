@@ -13,15 +13,18 @@ module FoobaraDemo
       depends_on OpenAiApi::CreateChatCompletion,
                  Foobara::Ai::AnthropicApi::CreateMessage
 
+      depends_on_entity QuestionLogEntry
+
       def execute
         determine_ai_command
         run_ai_service
         build_answer
+        log_question
 
         answer
       end
 
-      attr_accessor :ai_command, :response, :answer
+      attr_accessor :ai_command, :response, :answer, :log_entry
 
       def determine_ai_command
         self.ai_command = if service == "open-ai"
@@ -37,6 +40,10 @@ module FoobaraDemo
 
       def build_answer
         self.answer = domain_map(response)
+      end
+
+      def log_question
+        self.log_entry = QuestionLogEntry.create(question:, answer:, asked_at: Time.now)
       end
     end
   end

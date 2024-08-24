@@ -13,8 +13,16 @@ RSpec.describe FoobaraDemo::AnswerBot::Ask do
   end
   let(:service) { "open-ai" }
 
+  around do |example|
+    FoobaraDemo::AnswerBot::QuestionLogEntry.transaction do
+      example.run
+    end
+  end
+
   it "is successful", vcr: { record: :once } do
-    expect(outcome).to be_success
+    expect {
+      expect(outcome).to be_success
+    }.to change(FoobaraDemo::AnswerBot::QuestionLogEntry, :count).by(1)
     expect(result).to match(/honey/i)
   end
 

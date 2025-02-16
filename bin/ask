@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+require_relative "../boot"
+
+require "foobara/sh_cli_connector"
+
+command_connector = Foobara::CommandConnectors::ShCliConnector.new(single_command_mode: true)
+
+command_connector.connect(FoobaraDemo::AnswerBot::Ask)
+
+command_connector.run(ARGV)

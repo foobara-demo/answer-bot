@@ -17,6 +17,8 @@ Gem::Specification.new do |spec|
 
   spec.executables += ["answer-bot"]
 
+  spec.executables += ["ask"]
+
   spec.files = Dir[
     "lib/**/*",
     "src/**/*",
@@ -24,6 +26,10 @@ Gem::Specification.new do |spec|
     "README.md",
     "CHANGELOG.md"
   ]
+
+  spec.add_dependency "resque-scheduler"
+
+  spec.add_dependency "resque"
 
   spec.add_dependency "foobara"
 

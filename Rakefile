@@ -12,3 +12,9 @@ task default: %i[spec rubocop]
 task :environment do
   require_relative "boot"
 end
+
+require "resque/tasks"
+task "resque:work" => :environment
+
+require "resque/scheduler/tasks"
+task "resque:scheduler" => :environment

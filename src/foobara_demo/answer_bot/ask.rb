@@ -11,7 +11,9 @@ module FoobaraDemo
       result :string
 
       depends_on OpenAiApi::CreateChatCompletion,
-                 Foobara::Ai::AnthropicApi::CreateMessage
+                 Foobara::Ai::AnthropicApi::CreateMessage,
+                 DomainMappers::OpenAiApi::QuestionToCreateChatCompletion,
+                 DomainMappers::AnthropicApi::QuestionToCreateMessage
 
       depends_on_entity QuestionLogEntry
 

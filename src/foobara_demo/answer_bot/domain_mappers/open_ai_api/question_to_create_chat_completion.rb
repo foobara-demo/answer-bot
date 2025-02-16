@@ -8,7 +8,7 @@ module FoobaraDemo
           from :string
           to FoobaraDemo::OpenAiApi::CreateChatCompletion
 
-          def map(question)
+          def map
             {
               messages: [
                 {
@@ -22,6 +22,8 @@ module FoobaraDemo
               ]
             }
           end
+
+          alias question from
         end
       end
     end

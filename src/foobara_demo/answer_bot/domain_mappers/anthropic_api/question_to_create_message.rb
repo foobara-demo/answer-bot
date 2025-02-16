@@ -6,7 +6,7 @@ module FoobaraDemo
           from :string
           to Foobara::Ai::AnthropicApi::CreateMessage
 
-          def map(question)
+          def map
             {
               system: "You are a scientific-minded assistant who answers concisely and precisely.",
               messages: [
@@ -17,6 +17,8 @@ module FoobaraDemo
               ]
             }
           end
+
+          alias question from
         end
       end
     end

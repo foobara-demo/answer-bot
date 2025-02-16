@@ -6,9 +6,11 @@ module FoobaraDemo
           from Foobara::Ai::AnthropicApi::Types::MessageResult
           to :string
 
-          def map(message)
+          def map
             message.content.first.text
           end
+
+          alias message from
         end
       end
     end

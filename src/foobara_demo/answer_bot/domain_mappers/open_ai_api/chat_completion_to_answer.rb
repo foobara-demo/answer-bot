@@ -8,9 +8,11 @@ module FoobaraDemo
           from FoobaraDemo::OpenAiApi::ChatCompletion
           to :string
 
-          def map(chat_completion)
+          def map
             chat_completion.choices.first.message.content
           end
+
+          alias chat_completion from
         end
       end
     end

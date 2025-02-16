@@ -27,11 +27,20 @@ Gem::Specification.new do |spec|
     "CHANGELOG.md"
   ]
 
+  spec.add_dependency "puma"
+  spec.add_dependency "rackup"
+  spec.add_dependency "rerun"
+  spec.add_dependency "resque"
   spec.add_dependency "resque-scheduler"
 
-  spec.add_dependency "resque"
-
   spec.add_dependency "foobara"
+  spec.add_dependency "foobara-dotenv-loader"
+  spec.add_dependency "foobara-rack-connector"
+  spec.add_dependency "foobara-redis-crud-driver"
+  spec.add_dependency "foobara-remote-imports"
+  spec.add_dependency "foobara-resque-connector"
+  spec.add_dependency "foobara-resque-scheduler-connector"
+  spec.add_dependency "foobara-sh-cli-connector"
 
   spec.require_paths = ["lib"]
   spec.metadata["rubygems_mfa_required"] = "true"

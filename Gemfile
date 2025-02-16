@@ -3,16 +3,6 @@ ruby File.read("#{__dir__}/.ruby-version")
 
 gemspec
 
-gem "foobara-dotenv-loader"
-gem "foobara-rack-connector", github: "foobara/rack-connector"
-gem "foobara-redis-crud-driver", github: "foobara/redis-crud-driver"
-gem "foobara-remote-imports", github: "foobara/remote-imports"
-gem "foobara-resque-connector", github: "foobara/resque-connector"
-gem "foobara-resque-scheduler-connector", github: "foobara/resque-scheduler-connector"
-gem "foobara-sh-cli-connector", github: "foobara/sh-cli-connector"
-gem "rackup"
-gem "rerun"
-
 gem "rake"
 
 group :development do

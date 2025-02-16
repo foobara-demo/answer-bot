@@ -1,56 +1,18 @@
-GIT
-  remote: https://github.com/foobara/rack-connector.git
-  revision: 2e05a8d45e578d706fea99cb27074e045c78c9ff
-  specs:
-    foobara-rack-connector (0.0.4)
-      foobara
-      foobara-http-command-connector
-      foobara-util
-      rack
-
-GIT
-  remote: https://github.com/foobara/redis-crud-driver.git
-  revision: 030d289072d32bd47fe11a7d6aa8b71dc43ffc8c
-  specs:
-    foobara-redis-crud-driver (0.0.2)
-      foobara
-      redis
-
-GIT
-  remote: https://github.com/foobara/remote-imports.git
-  revision: abc5d86d1995d45411970eb124564ef1ef26963d
-  specs:
-    foobara-remote-imports (0.0.9)
-      foobara
-
-GIT
-  remote: https://github.com/foobara/resque-connector.git
-  revision: b0c37ee4bfab130bf9637a78cc487107a512f76f
-  specs:
-    foobara-resque-connector (0.0.2)
-      foobara
-      resque
-
-GIT
-  remote: https://github.com/foobara/resque-scheduler-connector.git
-  revision: 6d45a51f265664f2e3d318cac4f625491fe6af83
-  specs:
-    foobara-resque-scheduler-connector (0.0.3)
-      foobara
-      resque-scheduler
-
-GIT
-  remote: https://github.com/foobara/sh-cli-connector.git
-  revision: 0395892752bee143a69b889709740a70fbc88f1e
-  specs:
-    foobara-sh-cli-connector (0.0.11)
-      foobara
-
 PATH
   remote: .
   specs:
     foobara-demo-answer-bot (0.0.1)
       foobara
+      foobara-dotenv-loader
+      foobara-rack-connector
+      foobara-redis-crud-driver
+      foobara-remote-imports
+      foobara-resque-connector
+      foobara-resque-scheduler-connector
+      foobara-sh-cli-connector
+      puma
+      rackup
+      rerun
       resque
       resque-scheduler
 
@@ -132,24 +94,42 @@ GEM
     foobara-organization-generator (0.0.2)
       foobara
       foobara-files-generator
+    foobara-rack-connector (0.0.4)
+      foobara
+      foobara-http-command-connector
+      foobara-util
+      rack
     foobara-rack-connector-generator (0.0.7)
       foobara
       foobara-files-generator
+    foobara-redis-crud-driver (0.0.4)
+      foobara
+      redis
     foobara-redis-crud-driver-generator (0.0.3)
       foobara
       foobara-files-generator
+    foobara-remote-imports (0.0.9)
+      foobara
     foobara-remote-imports-generator (0.0.3)
       foobara
       foobara-files-generator
+    foobara-resque-connector (0.0.2)
+      foobara
+      resque
     foobara-resque-connector-generator (0.0.2)
       foobara
       foobara-files-generator
+    foobara-resque-scheduler-connector (0.0.3)
+      foobara
+      resque-scheduler
     foobara-resque-scheduler-connector-generator (0.0.2)
       foobara
       foobara-files-generator
     foobara-rubocop-rules (0.0.6)
       rubocop
       rubocop-rspec
+    foobara-sh-cli-connector (0.0.10)
+      foobara
     foobara-sh-cli-connector-generator (0.0.3)
       foobara
       foobara-files-generator
@@ -201,6 +181,7 @@ GEM
     mustermann (3.0.3)
       ruby2_keywords (~> 0.0.1)
     nenv (0.3.0)
+    nio4r (2.7.4)
     notiffany (0.1.3)
       nenv (~> 0.1)
       shellany (~> 0.0)
@@ -216,6 +197,8 @@ GEM
       byebug (~> 11.0)
       pry (>= 0.13, < 0.15)
     public_suffix (6.0.1)
+    puma (6.6.0)
+      nio4r (~> 2.0)
     raabro (1.4.0)
     racc (1.8.1)
     rack (3.1.10)
@@ -327,21 +310,12 @@ PLATFORMS
 DEPENDENCIES
   foob
   foobara-demo-answer-bot!
-  foobara-dotenv-loader
-  foobara-rack-connector!
-  foobara-redis-crud-driver!
-  foobara-remote-imports!
-  foobara-resque-connector!
-  foobara-resque-scheduler-connector!
   foobara-rubocop-rules
-  foobara-sh-cli-connector!
   foobara-spec-helpers
   guard-rspec
   pry
   pry-byebug
-  rackup
   rake
-  rerun
   rspec
   rspec-its
   rubocop-rake

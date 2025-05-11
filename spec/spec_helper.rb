@@ -21,6 +21,6 @@ end
 Dir["#{__dir__}/support/**/*.rb"].each { |f| require f }
 
 require "foobara/spec_helpers/all"
-VCR.use_cassette("remote imports", record: :once) do
+VCR.use_cassette("remote imports", record: :none) do
   require_relative "../boot/finish"
 end

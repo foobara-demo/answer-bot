@@ -19,7 +19,7 @@ RSpec.describe FoobaraDemo::AnswerBot::Ask do
     end
   end
 
-  it "is successful", vcr: { record: :once } do
+  it "is successful", vcr: { record: :none } do
     expect {
       expect(outcome).to be_success
     }.to change(FoobaraDemo::AnswerBot::QuestionLogEntry, :count).by(1)
@@ -29,7 +29,7 @@ RSpec.describe FoobaraDemo::AnswerBot::Ask do
   context "when using anthropic" do
     let(:service) { "anthropic" }
 
-    it "is successful", vcr: { record: :once } do
+    it "is successful", vcr: { record: :none } do
       expect(outcome).to be_success
       expect(result).to match(/honey/i)
     end

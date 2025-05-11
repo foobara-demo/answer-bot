@@ -24,7 +24,7 @@ RSpec.describe FoobaraDemo::OpenAiApi::CreateChatCompletion do
 
   let(:question) { "What is the pH of honey?" }
 
-  it "is successful", vcr: { record: :once } do
+  it "is successful", vcr: { record: :none } do
     expect(outcome).to be_success
     expect(result.choices[0].message.content).to match(/honey/i)
   end

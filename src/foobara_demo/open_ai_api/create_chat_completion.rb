@@ -8,7 +8,7 @@ module FoobaraDemo
       URL = "https://api.openai.com/v1/chat/completions".freeze
 
       inputs do
-        model :string, one_of: %w[gpt-4o gpt-4], default: "gpt-4o"
+        model :string, one_of: ["gpt-4o", "gpt-4"], default: "gpt-4o"
         messages [Message]
       end
 

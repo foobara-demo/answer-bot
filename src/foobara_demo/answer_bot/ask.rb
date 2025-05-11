@@ -5,7 +5,7 @@ module FoobaraDemo
 
       inputs do
         question :string, :required, description: "whatever you want to know!"
-        service :string, one_of: %w[open-ai anthropic], default: "open-ai"
+        service :string, one_of: ["open-ai", "anthropic"], default: "open-ai"
       end
 
       result :string

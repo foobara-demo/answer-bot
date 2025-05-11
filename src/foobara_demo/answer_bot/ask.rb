@@ -11,9 +11,7 @@ module FoobaraDemo
       result :string
 
       depends_on OpenAiApi::CreateChatCompletion,
-                 Foobara::Ai::AnthropicApi::CreateMessage,
-                 DomainMappers::OpenAiApi::QuestionToCreateChatCompletion,
-                 DomainMappers::AnthropicApi::QuestionToCreateMessage
+                 Foobara::Ai::AnthropicApi::CreateMessage
 
       depends_on_entity QuestionLogEntry
 
@@ -37,7 +35,8 @@ module FoobaraDemo
       end
 
       def run_ai_service
-        self.response = run_mapped_subcommand!(ai_command, question)
+        inputs = domain_map(question, to: ai_command)
+        self.response = run_subcommand!(ai_command, inputs)
       end
 
       def build_answer

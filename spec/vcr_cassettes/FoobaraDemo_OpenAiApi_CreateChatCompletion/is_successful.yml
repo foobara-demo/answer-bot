@@ -27,66 +27,67 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 12 Aug 2024 22:17:52 GMT
+      - Sun, 24 Aug 2025 22:46:23 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
+      Access-Control-Expose-Headers:
+      - X-Request-ID
       Openai-Organization:
       - user-mocyfzfqtusxbnhm0zzkagsd
       Openai-Processing-Ms:
-      - '1880'
+      - '705'
+      Openai-Project:
+      - proj_Y5GABMXv3WwvLgiO5BO8n1Se
       Openai-Version:
       - '2020-10-01'
-      Strict-Transport-Security:
-      - max-age=15552000; includeSubDomains; preload
+      X-Envoy-Upstream-Service-Time:
+      - '717'
       X-Ratelimit-Limit-Requests:
-      - '500'
+      - '5000'
       X-Ratelimit-Limit-Tokens:
-      - '30000'
+      - '450000'
       X-Ratelimit-Remaining-Requests:
-      - '499'
+      - '4999'
       X-Ratelimit-Remaining-Tokens:
-      - '29957'
+      - '449972'
       X-Ratelimit-Reset-Requests:
-      - 120ms
+      - 12ms
       X-Ratelimit-Reset-Tokens:
-      - 86ms
+      - 3ms
       X-Request-Id:
-      - req_e6bfdaa6f05ff1038682294f23f5208d
+      - req_85631fc536524c409fb6a2cf166eeef8
       Cf-Cache-Status:
       - DYNAMIC
-      Set-Cookie:
-      - __cf_bm=2ySi6cATx1VnH6qjyL.F4pnv7Q2TwEc0BlO3gVDVNTg-1723501072-1.0.1.1-e8oNviwFbhSEL5.sIBSoxUfF82_MdWkwwi7yjbRjnHySwpzC0dwpk1yanRO9k0WyTR.YlwKpbPDat1.OueetPQ;
-        path=/; expires=Mon, 12-Aug-24 22:47:52 GMT; domain=.api.openai.com; HttpOnly;
-        Secure; SameSite=None
-      - _cfuvid=6CNfhk_UtLEWTeC6kGcHsskc8lmokJzVuChHmZHsxhc-1723501072345-0.0.1.1-604800000;
-        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
       - nosniff
       Server:
       - cloudflare
       Cf-Ray:
-      - 8b23d678ebdd24f3-SJC
+      - 974662a65b23ed3d-SJC
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |
         {
-          "id": "chatcmpl-9vXeJFmpkJE2m61g6H82IeKUYQevF",
+          "id": "chatcmpl-C8DleAS06FGicbzYkniSS3PfndFft",
           "object": "chat.completion",
-          "created": 1723501071,
-          "model": "gpt-4o-2024-05-13",
+          "created": 1756075582,
+          "model": "gpt-4o-2024-08-06",
           "choices": [
             {
               "index": 0,
               "message": {
                 "role": "assistant",
-                "content": "Honey typically has a pH range of about 3.4 to 6.1, with an average pH around 3.9. This acidity helps inhibit bacterial growth, contributing to its preservative qualities.",
-                "refusal": null
+                "content": "The pH of honey generally ranges from about 3.4 to 6.1, depending on its composition and botanical origin. Most commonly, honey has a slightly acidic pH around 3.9.",
+                "refusal": null,
+                "annotations": []
               },
               "logprobs": null,
               "finish_reason": "stop"
@@ -94,10 +95,21 @@ http_interactions:
           ],
           "usage": {
             "prompt_tokens": 33,
-            "completion_tokens": 44,
-            "total_tokens": 77
+            "completion_tokens": 43,
+            "total_tokens": 76,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "audio_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "audio_tokens": 0,
+              "accepted_prediction_tokens": 0,
+              "rejected_prediction_tokens": 0
+            }
           },
-          "system_fingerprint": "fp_3aa7262c27"
+          "service_tier": "default",
+          "system_fingerprint": "fp_46bff0e0c8"
         }
-  recorded_at: Mon, 12 Aug 2024 22:17:52 GMT
-recorded_with: VCR 6.2.0
+  recorded_at: Sun, 24 Aug 2025 22:46:23 GMT
+recorded_with: VCR 6.3.1

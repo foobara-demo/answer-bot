@@ -33,14 +33,14 @@ Gem::Specification.new do |spec|
   spec.add_dependency "resque"
   spec.add_dependency "resque-scheduler"
 
-  spec.add_dependency "foobara"
-  spec.add_dependency "foobara-dotenv-loader"
-  spec.add_dependency "foobara-rack-connector"
-  spec.add_dependency "foobara-redis-crud-driver"
-  spec.add_dependency "foobara-remote-imports"
-  spec.add_dependency "foobara-resque-connector"
-  spec.add_dependency "foobara-resque-scheduler-connector"
-  spec.add_dependency "foobara-sh-cli-connector"
+  spec.add_dependency "foobara", ">= 0.1.2", "< 2.0.0"
+  spec.add_dependency "foobara-dotenv-loader", "< 2.0.0"
+  spec.add_dependency "foobara-rack-connector", "< 2.0.0"
+  spec.add_dependency "foobara-redis-crud-driver", "< 2.0.0"
+  spec.add_dependency "foobara-remote-imports", "< 2.0.0"
+  spec.add_dependency "foobara-resque-connector", "< 2.0.0"
+  spec.add_dependency "foobara-resque-scheduler-connector", "< 2.0.0"
+  spec.add_dependency "foobara-sh-cli-connector", "< 2.0.0"
 
   spec.require_paths = ["lib"]
   spec.metadata["rubygems_mfa_required"] = "true"

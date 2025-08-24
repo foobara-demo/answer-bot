@@ -51,14 +51,14 @@ module FoobaraDemo
                                  JSON.parse(response.body)
                                else
                                  # :nocov:
-                                 raise "Could not get compltion from #{URL} " \
+                                 raise "Could not get completion from #{URL} " \
                                        "#{response.code} #{response.body}"
                                  # :nocov:
                                end
       end
 
       def build_completion
-        self.completion = parsed_response.slice("choices")
+        self.completion = ChatCompletion.new(parsed_response.slice("choices"), ignore_unexpected_attributes: true)
       end
     end
   end

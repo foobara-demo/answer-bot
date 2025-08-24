@@ -13,6 +13,7 @@ task :environment do
   require_relative "boot"
 end
 
+require "redis"
 require "resque/tasks"
 task "resque:work" => :environment
 
